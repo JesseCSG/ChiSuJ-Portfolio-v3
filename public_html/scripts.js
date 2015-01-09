@@ -6,11 +6,13 @@ $("document").ready(function() {
     
     $("#TEXT ~ p").css( "color", "white");
     
-    $("p:last").css({"background-color": "green", "color": "purple"});
+    $("p:last").css({"border-style": "solid", "color": "white"});
     
     $("div:nth-child(3)").css("color", "white");
     
     $(".div2").css("color", "white");
+    
+    $(".div3").css("color", "white");
     
     $(".clickToHide").click(function() {
         $(".clickToHide").hide();
@@ -18,12 +20,32 @@ $("document").ready(function() {
     
     $("#TEXT2").bind("click", alertButtonClick);
     
-    $("#logo").bind()
+    $("#TEXT2").css({"border-style": "solid", "border-color": "red"});;
     
+    $(".second").bind("mouseover", mouseOverMe).bind("mouseout", mouseOutMe);
+    
+    $("#replaceWHtml").bind("click", replaceWHtml);
+    
+    $("#replaceWText").bind("click", replaceWText);
 });
 
     function alertButtonClick() {
         alert("You click, so want you want?");
     }
 
+    function mouseOverMe() {
+        $(".second").html("Get Out O'Here!!");
+    }
+    
+    function mouseOutMe() {
+        $(".second").html("You Leave!?! You Rude!!");
+    }
+    
+    function replaceWHtml() {
+        $("#h3Tag").html("<h6>A Random Sentence Appears!</h6>")
+    }
+    
+    function replaceWText() {
+        $("#h3Tag").text("<h6>A Random Sentence Now Changes!</h6>")
+    }
 
