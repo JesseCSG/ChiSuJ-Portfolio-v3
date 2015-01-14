@@ -50,8 +50,7 @@ function removeAPara() {
     $(".h3Tag").remove();}
 
 function hideTheImage() {
-    $('#image1').hide("clip", {}, 2500);
-}
-       
+    $('#image1').hide("fade", {}, 2500);}
 function showTheImage() {
     $("#image1").show("fold", {}, 2500);}
+
