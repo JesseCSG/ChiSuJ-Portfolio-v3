@@ -1,8 +1,8 @@
 $("document").ready(function() {
     
-    $(".body").css({"background-image": "url(http://abu0mushlih.files.wordpress.com/2013/12/space-arts-and-astronomical-technology-exploration_238385.jpg)", "size": "700px"});
+    $("video#bgvid").css({"background": "url(polina.jpg) no-repeat", "background-size": "cover"});
     
-    $(".div1").css("background-color", "red");    
+    $(".div1").css("border-style", "double");    
     $("#TEXT ~ p").css("color", "white");    
     $("p:last").css({"border-style": "solid", "color": "white"});    
     $("div:nth-child(3)").css("color", "white");    
@@ -27,6 +27,7 @@ $("document").ready(function() {
     $("#hideLogo").bind("click", hideTheImage);
     $("#showLogo").bind("click", showTheImage);
 
+    $(".div6").accordion({header: "h4"});
     
 });
 
