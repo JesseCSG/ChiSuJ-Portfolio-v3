@@ -1,33 +1,8 @@
 $("document").ready(function() {
     
-    $("video#bgvid").css({"background": "url(polina.jpg) no-repeat", "background-size": "cover"});
+    $(".list-group-item").css({"border-color": "darkslateblue", "background-color": "lightblue"});
     
-    $(".div1").css("border-style", "double");    
-    $("#TEXT ~ p").css("color", "white");    
-    $("p:last").css({"border-style": "solid", "color": "white"});    
-    $("div:nth-child(3)").css("color", "white");    
-    $(".div2").css("color", "white");    
-    $(".div3").css("color", "white");
-    
-    $(".clickToHide").click(function() {
-        $(".clickToHide").hide();
-    });
-    
-    $("#TEXT2").bind("click", alertButtonClick);    
-    $("#TEXT2").css({"border-style": "solid", "border-color": "red"});
-    
-    $(".second").bind("mouseover", mouseOverMe).bind("mouseout", mouseOutMe);
-    
-    $("#replaceWHtml").bind("click", replaceWHtml);    
-    $("#replaceWText").bind("click", replaceWText);
-    
-    $("#addAPara").bind("click", addAPara);    
-    $("#removeAPara").bind("click", removeAPara);
-
-    $("#hideLogo").bind("click", hideTheImage);
-    $("#showLogo").bind("click", showTheImage);
-
-    $(".div6").accordion({header: "h4"});
+    $("#container").css("border-style", "none");
     
 });
 
