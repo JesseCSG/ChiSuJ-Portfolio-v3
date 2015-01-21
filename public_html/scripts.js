@@ -3,20 +3,23 @@
 //*----------------------------------------------------------------------------
 $("document").ready(function() {
     
-    $(".nav").css({"border-color": "darkslateblue", "background-color": "lightblue"})
-             .css("border-style", "double");
+    $(".nav").css({"border-color": "darkslateblue", "background-color": "black"})
+             .css({"border-style": "double", "color": "white"});
+             
+    $(".accordion").accordion({ header: "h4" });
     
-    
+    $(".linkApp").css({"color": "white", "border-bottom": "solid"});
     
     $("#container").css("border-style", "none");
     
-    $("#bodyOne").css({"background-image": "url(http://fc05.deviantart.net/fs8/i/2005/301/a/2/Futuristic_Wallpaper_by_oninross.jpg)", "color": "white"});
+    $("#bodyOne").css({"background-image": "url(http://i.giphy.com/yByo4tOPLJKla.gif)", "color": "white"})
+                 .css("background-size", "cover");
        
     $("#bodyTwo").css({"background-image": "url(http://i.giphy.com/7cTJ3gWVsoC08.gif)", "color": "white"})
-            .css("background-size", "cover");
+                 .css("background-size", "cover");
     
-    $("#bodyThree").css({"background-image": "url(http://i.giphy.com/14hS1ZEmSfKdTW.gif)", "color": "white"})
-            .css("background-size", "cover");
+    $("#bodyThree").css({"background-image": "url(http://i.giphy.com/Vi2T8mzZwP61y.gif)", "color": "white"})
+                   .css("background-size", "cover");
 });
 //*----------------------------------------------------------------------------
 //*-Functions for HTML Page
