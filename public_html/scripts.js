@@ -1,25 +1,55 @@
 //*----------------------------------------------------------------------------
-//*-CSS-like functions that work via JQuiery
+//*-CSS-like functions that work via JQuery
 //*----------------------------------------------------------------------------
 $("document").ready(function() {
     
+    $("#randStuff ~ p").css("border-style", "solid");
+    
+    //*Allows for replacement and change of H3 tag.
+    $("#replaceWHtml").bind("click", replaceWHtml);
+    $("#replaceWText").bind("click", replaceWText);
+
+    
+    //* Alterations of the navigation bar.
     $(".nav").css({"border-color": "darkslateblue", "background-color": "black"})
              .css({"border-style": "double", "color": "white"});
              
-    $(".accordion").accordion({ header: "h4" });
-    
+    ///*Alterations of Accordion/ making of Accordion.
+    $(".accordion").accordion({ header: "h4" })
+                    .css({"background-color": "blue", "color": "white"});
+            
+    //*Creates workable Tab-Bar.
+    $("#tabs").tabs();
+    $("#tabs").draggable();
+    $("#tabs").resizable();
+    $("#sortMe").sortable();
+            
+    //*Allows mouse overs and mouse abilities.
+    $(".second").bind("mouseover", mouseOverMe)
+                .bind("mouseout", mouseOutMe);
+                    
+    //*Alterations to link.
     $(".linkApp").css({"color": "white", "border-bottom": "solid"});
     
+    //*Alterations on container.
     $("#container").css("border-style", "none");
     
+    //*Allows gif background and covers gif on screen.
     $("#bodyOne").css({"background-image": "url(http://i.giphy.com/yByo4tOPLJKla.gif)", "color": "white"})
-                 .css("background-size", "cover");
-       
+                 .css("background-size", "cover");       
     $("#bodyTwo").css({"background-image": "url(http://i.giphy.com/7cTJ3gWVsoC08.gif)", "color": "white"})
-                 .css("background-size", "cover");
-    
+                 .css("background-size", "cover");    
     $("#bodyThree").css({"background-image": "url(http://i.giphy.com/Vi2T8mzZwP61y.gif)", "color": "white"})
                    .css("background-size", "cover");
+           
+    //*Alterations to show/close Navigation Bar.
+    $("#showNav").bind("click", showTheNav)
+            .css({"background-color": "blue", "color": "white"});
+    $("#closeNav").bind("click", closeTheNav)
+            .css({"background-color": "blue", "color": "white"});
+    
+    $(".linkGif").css({"size": "200px", "border": "2px solid blue"});    
+    
 });
 //*----------------------------------------------------------------------------
 //*-Functions for HTML Page
@@ -31,10 +61,10 @@ function alertButtonClick() {
 
 function mouseOverMe() {
 //    When moused over, the text changes
-    $(".second").html("Get Out O'Here!!");}
+    $(".second").html("It's our little secret, we mon't make a fuss!");}
 function mouseOutMe() {
 //    After mousing and leave, the text changes agian to this
-    $(".second").html("You Leave!?! You Rude!!");}
+    $(".second").html("We found Gold!! We found Gold!!");}
 
 function replaceWHtml() {
 //    When button is clicked, text appears
@@ -50,10 +80,10 @@ function removeAPara() {
 //    When clicked, the new text is then erased
     $(".h3Tag").remove();}
 
-function hideTheImage() {
+function closeTheNav() {
 //    When clicked, the image/gif is hidden 
-    $('#image1').hide("fade", {}, 2500);}
-function showTheImage() {
+    $('.list-group').hide("fade", {}, 2500);}
+function showTheNav() {
 //    When clicked, the hidden image/gif then reappears
-    $("#image1").show("fold", {}, 2500);}
+    $(".list-group").show("fold", {}, 2500);}
 
